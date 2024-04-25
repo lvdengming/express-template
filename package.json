@@ -1,0 +1,29 @@
+{
+  "name": "express-template-js",
+  "description": "A express program template with javascript.",
+  "version": "0.0.1",
+  "main": "src/app.js",
+  "keywords": [
+    "express",
+    "template",
+    "javascript"
+  ],
+  "author": "lvdengming@foxmail.com",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node-dev src/app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "chalk": "^4.1.2",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "node-dev": "^8.0.0",
+    "nodemon": "^3.1.0"
+  }
+}
