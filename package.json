@@ -1,29 +1,48 @@
 {
-  "name": "express-template-js",
-  "description": "A express program template with javascript.",
-  "version": "0.0.1",
-  "main": "src/app.js",
-  "keywords": [
-    "express",
-    "template",
-    "javascript"
-  ],
-  "author": "lvdengming@foxmail.com",
-  "license": "MIT",
-  "scripts": {
-    "dev": "node-dev src/app.js"
-  },
-  "dependencies": {
-    "body-parser": "^1.20.2",
-    "chalk": "^4.1.2",
-    "cookie-parser": "^1.4.6",
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2",
-    "express-session": "^1.18.0",
-    "morgan": "^1.10.0"
-  },
-  "devDependencies": {
-    "node-dev": "^8.0.0",
-    "nodemon": "^3.1.0"
-  }
+    "name": "express-template-js",
+    "description": "A express program template with javascript.",
+    "version": "0.0.1",
+    "main": "src/app.js",
+    "keywords": [
+        "express",
+        "template",
+        "javascript"
+    ],
+    "author": "lvdengming@foxmail.com",
+    "license": "MIT",
+    "scripts": {
+        "prepare": "husky install",
+        "dev": "node-dev src/app.js",
+        "lint": "eslint . --ext .js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+        "format": "prettier . --write --ignore-unknown"
+    },
+    "dependencies": {
+        "body-parser": "^1.20.2",
+        "chalk": "^4.1.2",
+        "cookie-parser": "^1.4.6",
+        "dotenv": "^16.4.5",
+        "express": "^4.19.2",
+        "express-session": "^1.18.0",
+        "morgan": "^1.10.0"
+    },
+    "devDependencies": {
+        "node-dev": "^8.0.0",
+        "nodemon": "^3.1.0",
+        "@commitlint/cli": "^19.3.0",
+        "@commitlint/config-conventional": "^19.2.2",
+        "@commitlint/format": "^19.3.0",
+        "eslint": "^8.57.0",
+        "husky": "^9.0.11",
+        "lint-staged": "^15.2.2",
+        "prettier": "^3.2.5"
+    },
+    "lint-staged": {
+        "*.{js,jsx,cjs,mjs}": "eslint --cache --fix",
+        "*.{js,jsx,cjs,mjs,md}": "prettier --write"
+    },
+    "prettier": {
+        "printWidth": 100,
+        "tabWidth": 4,
+        "trailingComma": "none"
+    }
 }
