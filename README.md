@@ -1,6 +1,6 @@
 # express-template-js
 
-A express program template with javascript.
+A express program template.
 
 ## More
 
